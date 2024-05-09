@@ -1,1 +1,5 @@
-1. 公式サイトにアクセスする
+1. 公式サイト(https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)にアクセスする
+
+2. Windowsを選択し、ダウンロードバージョン(x64 Installer)を選択する
+
+3. 
