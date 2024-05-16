@@ -86,6 +86,6 @@ touch ファイル名.java
 ```bash
 code .
 ```
-ここからはxxxxを確認しましょう。
+ここからはhttps://github.com/mu-san16/mouseapp/tree/main/Create%20updaterを確認しましょう。
 
 
