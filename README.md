@@ -8,7 +8,7 @@ WindowsとMacそれぞれのhttps://github.com/mu-san16/mouseapp/tree/main/Downl
 
 # Setting Environment Variables
 
-# CREATE Database
+# Create Database
 
 コマンドプロンプトかターミナルを開いてMysqlを開く
 
@@ -72,4 +72,20 @@ INSERT INTO mouse VALUES(...);
 +--------+-----------+------+
 ```
 のようになれば完成です。
+
+# Create updater
+ここではWeb上でデータベースを接続するための準備を行います。Javaファイルを作成し、Javaファイルにコードを記載する準備を行います。
+
+```bash
+touch ファイル名.java
+```
+
+ファイル名は好きに設定してください。また、ファイルはフォルダの中に作るのがおすすめです。
+作成できたらVscodeに移動してコードを記載していきます。
+
+```bash
+code .
+```
+ここからはxxxxを確認しましょう。
+
 
