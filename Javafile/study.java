@@ -26,7 +26,39 @@ public class study {
          // String input = new java.util.Scanner(System.in).nextLine();, int input = new java.util.Scanner(System.in).nextLine(); キーボードで1行の文字列の入力を受け付ける
          System.out.println("あなたの名前は？");
          String input = new java.util.Scanner(System.in).nextLine();
-         System.out.println("私の名前は" + input + "です");        
+         System.out.println("私の名前は" + input + "です");
+
+         //制御構造(順次、分岐、繰り返し)
+         //分岐　(if)
+         int age;
+
+         age = 19;
+
+         if(age >= 21){
+            System.out.println("大人");
+         }
+         else if (18 < age &  age < 20){
+            System.out.println("大学生");
+         }
+         else{
+            System.out.println("未成年");
+         }
+         
+         //繰り返し文 (while, for)
+
+         int num = 0;
+
+         while(num < 20){
+            System.out.println(num);
+
+            num++;
+         }
+
+         for(int i = 0; i<20; i++){
+            System.out.println(num);
+            num++;
+         }
+                
     }
 }
 
