@@ -58,7 +58,50 @@ public class study {
             System.out.println(num);
             num++;
          }
-                
+
+         //変数の限界→変数が多くなると準備が大変となる→そこで使うのが配列
+         //配列　同一種類の複数のデータを並び順に格納するデータ構造・配列は0からスタートするので注意
+         //例
+         // int Jap = 95
+         // int math = 85
+         // int English = 70
+         //この場合は変数が3つ必要となる。これを1つにしたのが配列
+         int [] score = new int[3];
+         int [] score1 = {95, 85, 70};  //書き方はこの2種類
+
+         score[0] = 95;
+         score[1] = 85;
+         score[2] = 70;
+
+         System.out.println(score1[1]);
+
+         int sum = 0;
+         int average = 0;
+
+         for(int i = 0; i< score.length; i++){
+            sum = sum + score[i];
+         }
+
+         average = sum / score.length;
+         System.out.println(sum);
+         System.out.println(average);
+
+         //多次元配列
+         int [][] scores = new int[2][5];
+
+         scores[0][0] = 98;
+         scores[0][1] = 97;
+         scores[0][2] = 96;
+         scores[0][3] = 95;
+         scores[0][4] = 94;
+
+         scores[1][0] = 93;
+         scores[1][1] = 92;
+         scores[1][2] = 91;
+         scores[1][3] = 90;
+         scores[1][4] = 89;
+
+         System.out.println(scores[0][4]);
     }
 }
 
