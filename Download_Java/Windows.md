@@ -31,4 +31,24 @@ javaのversionの部分は自分のversionを入れてください
 ```bash
 $javaHome = "C:\Program Files\Java\javaのversion"
 ```
-次に
+次にJavaHomeの設定を行います。
+
+```bash
+[System.Environment]::SetEnvironmentVariable("JAVA_HOME", $javaHome, [System.EnvironmentVariableTarget]::Machine)
+```
+最後にPathの環境変数の更新を行います。
+
+```bash
+$path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+```
+
+```bash
+$newPath = "$path;$javaHome\bin"
+[System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::Machine)
+```
+ここまでできたら完了です。最後にJavaのバージョンを確認してインストールできたことを確認しましょう
+
+```bash
+java -version
+```
+
