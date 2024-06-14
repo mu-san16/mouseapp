@@ -15,23 +15,45 @@ public class resolve{
 
         //問題2解答・問題3解答
         Scanner scanner = new Scanner(System.in);
+        System.out.println("数値の入力してください");    
+        int a = scanner.nextInt();    //型が整数型なので、整数しか代入できない状況
         System.out.println("数値の入力してください");
-        int a = scanner.nextInt();
-        System.out.println("数値の入力してください");
-        int b = scanner.nextInt();
+        int b = scanner.nextInt();   //型が整数型なので、整数しか代入できない状況
         int tasu;
         tasu = a + b;
         int hiku;
         hiku = a - b;
         int kakeru;
         kakeru = a * b;
-        int waru;
-        waru = a / b;
-        System.out.println(a + "+" + b + "は" + tasu);
-        System.out.println(a + "+" + b + "は" + hiku);
-        System.out.println(a + "+" + b + "は" + kakeru);
-        System.out.println(a + "+" + b + "は" + waru);
+        Integer waru = null; // 初期化、割り算の結果を保存するためにIntegerを使用
+        if (b != 0) {
+            waru = a / b;
+        }
 
+        // 最大値を求める　→もう少し簡略化できそう
+        int max = tasu; // 初期値として足し算の結果を設定
+        if (hiku > max) {
+            max = hiku;
+        }
+        if (kakeru > max) {
+            max = kakeru;
+        }
+        if (waru != null && waru > max) {
+            max = waru;
+        }
+
+        // 結果の表示
+        System.out.println(a + "+" + b + "は" + tasu);
+        System.out.println(a + "-" + b + "は" + hiku);
+        System.out.println(a + "*" + b + "は" + kakeru);
+        if (waru != null) {
+            System.out.println(a + "/" + b + "は" + waru);
+        } else {
+            System.out.println(a + "/" + b + "は割り算できません");
+        }
+        System.out.println("最大値は" + max + "です");
     }
 }
+
+
 
