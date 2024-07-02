@@ -50,18 +50,25 @@ desc データベース名.テーブル名;
 ここまでできたら、データベースに移動してデータを入れてみる
 
 ```bash
-desc mouse.mouse;
+USE データベース名;
 ```
+このコードにより使用するデータベースを決める
+
 ```bash
-desc mouse.mouse;
+SEKECT * FROM テーブル名;
 ```
 
 出力がEmpty set (0.01 sec)になることを確認する
 
 ```bash
-INSERT INTO mouse VALUES(...);
+INSERT INTO テーブル名 VALUES(作成したテーブルのカラムの順番にデータを入れる);
 ```
-...には自分が作ったテーブル分のデータを入れてください
+
+これによりテーブルにデータが挿入される。データが挿入されたかどうかを確認する
+
+```bash
+SEKECT * FROM テーブル名;
+```
 
 出力
 ```bash
