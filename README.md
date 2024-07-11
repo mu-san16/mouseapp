@@ -94,10 +94,18 @@ Connection con = DriverManager.getConnection(URL, ユーザー名、パスワー
 このコードを実行することによりDBへの接続が可能となる
 
 ## ステートメントの生成
+statementはSQL文を実行するためのオブジェクトで下記のコードを実行することで得ることができる
+
+```bash
+Statement stmt = con.createStatement();
+```
+
+先ほどの接続情報をもつconからstatementメゾットを作成している
 
 ## SQLの実行
+SQL文で実行して欲しい内容を下記のように記載することで実行することが可能
 ## リソースの解放
-
+SQL文で実行して欲しい
 # Create updater
 ここではWeb上でデータベースを接続するための準備を行います。Javaファイルを作成し、Javaファイルにコードを記載する準備を行います。
 
