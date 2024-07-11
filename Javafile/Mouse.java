@@ -2,15 +2,18 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-import java.sql.SQLException;
+// import java.sql.SQLException;
 
-public class Mouse {  //Mouseという名前クラスの作成
+ //Mouseという名前クラスの作成
+public class Mouse{
     public static void main(String[] argrs) {  //mainメゾットを定義
         // データベース接続情報
-        String url = "jdbc:mysql://localhost:3306/mouse"
+        String url = "jdbc:mysql://localhost:3306/mouse";
         String user = "root";
         String password = "password";
-        Stirng sql = "INSERT INTO mouse VALUES('+/-', '2024/5/1', 1)";  //VALUESの部分は変更が必要です
+        //この上3つのコードに関しては今後書き換えることがないものとなっている
+
+        String sql = "INSERT INTO mouse VALUES('+/-', '2024/5/1', 1)";  //VALUESの部分は変更が必要です
 
         Connection con = null;  //データベース接続を保持するためのオブジェクトの宣言
         Statement stmt = null;  //SQL文を実行するためのオブジェクトの宣言
@@ -21,15 +24,15 @@ public class Mouse {  //Mouseという名前クラスの作成
             //ステートメントの生成
             stmt = con.createStatement();
             //SQLを実行
-            int count = stmt.excuteUpdate(sql);
+            int count = stmt.executeUpdate(sql);
             System.out.println(count + "件更新しました"); 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
                 //リソースを解放
-                if (stmt ! = null) stmt.close();
-                if (con ! = null) con.close();
+                if (stmt != null) stmt.close();
+                if (con != null) con.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
