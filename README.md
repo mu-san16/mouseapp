@@ -104,21 +104,20 @@ Statement stmt = con.createStatement();
 
 ## SQLの実行
 SQL文で実行して欲しい内容を下記のように記載することで実行することが可能
+
+```bash
+int count = stmt.executeUpdate(SQL文);
+```
+
+このコードにより実際にSQL文を実行することができる
+
 ## リソースの解放
-SQL文で実行して欲しい
-# Create updater
-ここではWeb上でデータベースを接続するための準備を行います。Javaファイルを作成し、Javaファイルにコードを記載する準備を行います。
+リソースをたくさん使うので、使い終わったら切る作業が必要となり、下記のコードで実行することが可能
 
 ```bash
-touch ファイル名.java
+stmt.close();
+con.close();
 ```
 
-ファイル名は好きに設定してください。また、ファイルはフォルダの中に作るのがおすすめです。
-作成できたらVscodeに移動してコードを記載していきます。
-
-```bash
-code .
-```
-ここからはhttps://github.com/mu-san16/mouseapp/tree/main/Create%20updater を確認しましょう。
 
 
