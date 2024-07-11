@@ -81,6 +81,24 @@ SEKECT * FROM テーブル名;
 のようになれば完成です。
 
 # Create updater
+## DBへの接続
+JDBCドライバーを管理するためのクラスであるDriverManagerを使用して行う。使い方は下記のようになっている。
+
+```bash
+Connection con = DriverManager.getConnection(URL, ユーザー名、パスワード);
+```
+
+ユーザー名とパスワードはMySQLを使用するときのrootとpassとなる。
+またURLは接続するDBを指定する文字列
+→jdbc:mysql://(DBサーバ名)/(DB名)
+このコードを実行することによりDBへの接続が可能となる
+
+## ステートメントの生成
+
+## SQLの実行
+## リソースの解放
+
+# Create updater
 ここではWeb上でデータベースを接続するための準備を行います。Javaファイルを作成し、Javaファイルにコードを記載する準備を行います。
 
 ```bash
