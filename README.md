@@ -111,10 +111,18 @@ int count = stmt.executeUpdate(SQL文);
 
 このコードにより実際にSQL文を実行することができる
 
+## 検索処理
+select文で検索するためのSQL文を実行するために必要な処理となる
+```bash
+ResultSet rs = stmt.executeQuery(SQL文);
+```
+ResultSetは検索結果を保持するメソッドとなっている
+
 ## リソースの解放
 リソースをたくさん使うので、使い終わったら切る作業が必要となり、下記のコードで実行することが可能
 
 ```bash
+re.close();
 stmt.close();
 con.close();
 ```
