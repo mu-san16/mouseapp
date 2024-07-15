@@ -144,8 +144,8 @@ INSERT INTO テーブル名　VALEUS (?.?.?);
 
 次にsetterメソッドで?に値を設定する。
 ```bash
-ps.setInt(1, 7);   ps.setString(2, "+/+")
+ps.setInt(1, 7);   ps.setString(2, "+/+");
 ```
 どんなデータを入れるか指定をする
 
-
+この繰り返しを使用する場合は、データ先にリストとして準備しておく必要がある
