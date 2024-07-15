@@ -127,5 +127,25 @@ stmt.close();
 con.close();
 ```
 
+###　補足
+ステートメントの生成の部分ですが、PreparedStatementを使用することがある。
+PrepareStatementとは似たSQL文を繰り返し実行することに使用するものであり、使い方は以下の方法で使用する。
+
+
+```bash
+PreparedStatement ps = con.prepareStatement((?入り)SQL文);
+```
+
+(?入り)SQL文とは？
+```bash
+INSERT INTO テーブル名　VALEUS (?.?.?);
+```
+このように?の入ったSQL文で、?の部分は後で指定します。このSQL文ではINSERTでデータを挿入していることを表している。
+
+次にsetterメソッドで?に値を設定する。
+```bash
+ps.setInt(1, 7);   ps.setString(2, "+/+")
+```
+どんなデータを入れるか指定をする
 
 
