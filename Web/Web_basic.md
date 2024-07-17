@@ -7,6 +7,6 @@ Web環境で動くプログラムをWebアプリケーションといい、サ�
 ・ハイパーテキスト：複数の文章を結びつける仕組み(**リンク**を使用することができる)
 ・マークアップ言語：**タグ**を使って文章に意味づけができる(<title>HTML</title>)
 
-具体的な例は
+具体的な例はhttps://github.com/mu-san16/mouseapp/blob/main/Web/example.html を確認してください。
 
 
