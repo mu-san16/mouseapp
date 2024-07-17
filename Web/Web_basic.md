@@ -9,4 +9,14 @@ Web環境で動くプログラムをWebアプリケーションといい、サ�
 
 具体的な例はhttps://github.com/mu-san16/mouseapp/blob/main/Web/example.html を確認してください。
 
+# form画面
+入力情報をWebサーバーに送ることできるページであり、サイトなどに入る際に使用するものである。
+何をどのように誰にという情報を処理するプログラムを作成することで、動かすことが可能である。
 
+```bash
+<form action = "プログラムURL" method = "GET/POST">
+      フォーム部品
+</form>
+```
+
+具体的な例はhttps://github.com/mu-san16/mouseapp/blob/main/Web/example.html を確認してください。
