@@ -20,3 +20,56 @@ Web環境で動くプログラムをWebアプリケーションといい、サ�
 ```
 
 具体的な例はhttps://github.com/mu-san16/mouseapp/blob/main/Web/example.html を確認してください。
+
+# Apache Tomcat
+webサーバーとwebコンテナの機能を持つJava製の無料ソフトウェアである。サーブレットとJSPの実行環境を整えることが可能
+webアプリではファイル構成が重要となり、下記のようなファイル構成にするのが一般的である
+<pre>
+Webapps
+├── コンテキストルート
+    ├── HTMLファイル
+    ├── JSPファイル
+    ├── 画像データなど
+    ├── WEB・INF
+        ├── classes-class
+        ├── web.xml
+</pre>
+
+## download Tomcat
+Windowsの場合:https://qiita.com/ryome/items/5513da20c0a0f3cfdb45
+Macの場合:https://qiita.com/R1ck29/items/9729b0b2abb9020c31eb
+
+## Execution Tomcat
+Windowsの場合
+Tomcatのディレクトリまで移動する
+
+```bash
+cd ./apache-tomcat-xxxx/bin
+```
+
+```bash
+startup.bat
+```
+
+停止する場合
+```bash
+shutdown.bat
+```
+
+Macの場合
+Tomcatのディレクトリまで移動する
+
+```bash
+cd ./apache-tomcat-xxxx/bin
+```
+
+実行する
+
+```bash
+./startup.sh
+```
+
+停止する
+```bash
+./shutdown.sh
+```
