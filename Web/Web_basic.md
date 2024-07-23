@@ -100,3 +100,23 @@ void setCharacterEncoding(String en);
 String getParameter(String name)
 String[] getParameterValues(String name);
 ```
+
+#　セッション管理
+複数のリクエスト・レスポンスにまたがってユーザーの識別とデータの管理をする仕組み。一般的にはリクエストした情報は一度使用したら消えるが、セッションオブジェクトを使用することで、データを保存することが可能となる。
+また複数の管理のものを管理するためにセッションIDが生成される。
+この内容は上記のサーブレットに記載する。
+
+reqからセッションオブジェクトを取得する。初回時にture→生成/false→null
+```bash
+HttpSession getSession(boolean create);
+```
+
+セッションオブジェクトのデータを管理。valueをnameという名前で格納
+```bash
+void setAttribute(String name, Object value);
+```
+
+nameという名前のデータを取得
+```bash
+Object getAttribute(String name);
+```
