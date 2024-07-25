@@ -13,7 +13,7 @@ public class LoginServlet extends HttpServlet{
             String name = req.getParameter("name");
             req.getSession().setAttribute("userName", name);
 
-            res.sendRedirect("mouseInfo.html?userName" + name);
+            res.sendRedirect("mouseInfo_add.html?userName" + name);
         }
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
         throws IOException, ServletException{

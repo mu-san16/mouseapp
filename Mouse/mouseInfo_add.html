@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>マウス情報の追加</title>
+    </head>
+    <body>
+        <h1>マウス情報の追加</h1>
+        <p id="userName"></p>
+        <form action="/Mouse/MouseInfo_add" method="post">
+            gene_name：<input type="text" name="gene" size="20" /><br/>
+            gene_birth：<input type="text" name="birth" size="20" /><br/>
+            gene_sex：<input type="checkbox" name="sex" value="Male" />Male 
+                <input type="checkbox" name="sex" value="Female" />Female<br/>
+            <input type="submit" value="登録" />
+            <input type="reset" value="取消" />
+        </form>
+        <script>
+            // URLクエリパラメータからユーザー名を取得して表示
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+            
+            const userName = getQueryParam("userName");
+            if (userName) {
+                document.getElementById("userName").textContent = "こんにちは、" + userName + "さん";
+            }
+        </script>
+    </body>
+</html>
