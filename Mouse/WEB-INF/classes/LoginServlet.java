@@ -1,5 +1,5 @@
 import java.io.*;
-import java.servlet.*;
+import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -13,7 +13,7 @@ public class LoginServlet extends HttpServlet{
             String name = req.getParameter("name");
             req.getSession().setAttribute("userName", name);
 
-            res.sendRedirect("mouseInfo_add.html?userName" + name);
+            res.sendRedirect("MouseInfo.html?userName" + name);
         }
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
         throws IOException, ServletException{

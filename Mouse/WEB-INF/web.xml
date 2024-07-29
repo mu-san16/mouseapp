@@ -9,9 +9,19 @@
         <servlet-class>LoginServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>MouseInfoServlet</servlet-name>
+        <servlet-class>MouseInfoServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MouseInfoServlet</servlet-name>
+        <url-pattern>/MouseInfo</url-pattern>
     </servlet-mapping>
 
 </web-app>

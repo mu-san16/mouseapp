@@ -1,20 +1,24 @@
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/MouseInfo")
-public class MouseInfoServlet extends HttpServlet{
+public class MouseInfoServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest req, HttpServletResoponse res)
-        throws IOException, ServletExpcetion{
-            req.setCharacterEncoding("utf-8")
-            res.setContentType("text/html;charset=utf-8")
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res)
+        throws IOException, ServletException {
+            req.setCharacterEncoding("utf-8");
+            res.setContentType("text/html;charset=utf-8");
 
             String mouseName = req.getParameter("gene");
             String mouseAge = req.getParameter("birth");
-            String [] mouseSexs = req.getParameterValues("sex");
-            String userName = (String) req.getSession().getAtrribute("userName")
+            String[] mouseSexs = req.getParameterValues("sex");
+            String userName = (String) req.getSession().getAttribute("userName");
 
             // 性別を表示用の文字列に変換
             String mouseSex = "";
@@ -33,7 +37,7 @@ public class MouseInfoServlet extends HttpServlet{
             out.println("<p>マウスの名前：" + mouseName + "</p>");
             out.println("<p>マウスの年齢：" + mouseAge + "</p>");
             out.println("<p>マウスの性別：" + mouseSex + "</p>");
-            out.println("<a href='mouseInfo.html'>戻る</a>");
+            out.println("<a href='MouseInfo.html'>戻る</a>");
             out.println("</body>");
             out.println("</html>");
         }
