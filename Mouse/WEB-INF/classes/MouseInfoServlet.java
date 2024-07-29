@@ -1,5 +1,3 @@
-package com.example;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -39,7 +37,7 @@ public class MouseInfoServlet extends HttpServlet {
             out.println("<p>マウスの名前：" + mouseName + "</p>");
             out.println("<p>マウスの年齢：" + mouseAge + "</p>");
             out.println("<p>マウスの性別：" + mouseSex + "</p>");
-            out.println("<a href='mouseInfo.html'>戻る</a>");
+            out.println("<a href='MouseInfo.html'>戻る</a>");
             out.println("</body>");
             out.println("</html>");
         }
