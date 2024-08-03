@@ -120,3 +120,55 @@ nameという名前のデータを取得
 ```bash
 Object getAttribute(String name);
 ```
+
+# JSP(Java Server Pages)
+HMTLに独自のタグでJavaのコードを埋め込んで動的なwebページを作る技術
+サーブレットはJavaの中にHTMLが含まれるが、JSPではHTMLの中にJavaが含まれる
+かなり高速に作業することが可能となる
+
+JSPにはタグと呼ばれるものが存在し、このタグを使用することで動かすことが可能
+1. ディレクティブタグ
+　　サーブレット変換時に必要な設定を記述
+
+```bash
+<%@page contentType = "text.html;charset = utf-8" %>
+```
+
+```bash
+<%@page import = "java.util.*" %>
+```
+
+2. 宣言タグ
+　　メンバ変数やメソッドを定義
+
+```bash
+<%@String fortune(){ 〜　} %>
+```
+
+3. 式タグ
+　　出力したい式を記述
+
+```bash
+<%= i + j %>
+```
+
+4. スクリプトタグ
+　　Javaのプログラムを記述
+
+```bash
+<% for (int i = 0; i < 3; i ++){%>
+```
+5. コメントタグ
+　　JSPのコメントを記述
+
+```bash
+<%-- コメント　-- %>
+```
+
+6. アクションタグ
+　　特定の処理をシンプルに書くためのタグ
+
+```bash
+<jsp:useBean id = "counter" scope = "session" class = "Counter" />
+```
+
