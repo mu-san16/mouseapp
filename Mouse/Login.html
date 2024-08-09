@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
-   <head>
-        <meta charset="utf-8">
-        <title>ログイン画面</title>
-        <link rel = "stylesheet" type = "text/css" href="css/Login.css">
-   </head>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面 - Mouse Data</title>
+    <link rel="stylesheet" type="text/css" href="css/Login.css">
+</head>
 <body>
-    <div class = "container">
+    <div class="container">
         <h1>Mouse Data</h1>
-        <form action = "/Mouse/Login" method = "post">
-            name：<input type = "text" name = "name" size = "10" /><br/>
-            password：<input type = "password" name = "pass" size = "15" /><br/>
-            <input type = "submit" value = "ログイン" />
+        <form action="Login" method="post">
+            <label for="name">ユーザー名：</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="pass">パスワード：</label>
+            <input type="password" id="pass" name="pass" required>
+            
+            <input type="submit" value="ログイン">
         </form>
     </div>
 </body>
