@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>マウス情報の追加</title>
+        <link rel="stylesheet" type="text/css" href="css/MouseInfo.css">
     </head>
     <body>
         <h1>マウス情報の追加</h1>
@@ -12,12 +13,16 @@
             gene_name：<input type="text" name="gene" size="20" required><br/>
             gene_birth：<input type="date" name="birth" required><br/>
             gene_sex：
-            <input type="radio" name="sex" value="Male" required>Male 
-            <input type="radio" name="sex" value="Female" required>Female<br/>
+            <div class="radio-group">
+                <label><input type="radio" name="sex" value="Male" required>Male</label>
+                <label><input type="radio" name="sex" value="Female" required>Female</label>
+            </div>
             詳細情報入力欄：<br/>
             <textarea name="msg" rows="5" cols="50" placeholder="詳細情報を入力してください"></textarea><br/>
-            <input type="submit" value="登録">
-            <input type="reset" value="取消">
+            <div class="button-group">
+                <input type="submit" value="登録">
+                <input type="reset" value="取消">
+            </div>
         </form>
         <script>
             // URLクエリパラメータからユーザー名を取得して表示
