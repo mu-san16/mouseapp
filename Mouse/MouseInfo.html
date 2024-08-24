@@ -10,6 +10,8 @@
         <h1>マウス情報の追加</h1>
         <p id="userName"></p>
         <form action="/Mouse/MouseInfo" method="post">
+
+            <!-- この部分を変更してください -->
             gene_name：<input type="text" name="gene" size="20" required><br/>
             gene_birth：<input type="date" name="birth" required><br/>
             gene_sex：
@@ -17,12 +19,16 @@
                 <label><input type="radio" name="sex" value="Male" required>Male</label>
                 <label><input type="radio" name="sex" value="Female" required>Female</label>
             </div>
+            <!-- この部分を変更してください -->
+            
             詳細情報入力欄：<br/>
             <textarea name="msg" rows="5" cols="50" placeholder="詳細情報を入力してください"></textarea><br/>
+
+            <!-- この部分に削除、表示、修正ボタンを追加してください -->
             <div class="button-group">
-                <input type="submit" value="登録">
-                <input type="reset" value="取消">
+                <input type="submit" value="追加">
             </div>
+            <!-- この部分に削除、表示、修正ボタンを追加してください -->
         </form>
         <script>
             // URLクエリパラメータからユーザー名を取得して表示
