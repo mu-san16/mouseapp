@@ -14,18 +14,25 @@ graph TD
     E --> H[mouseInput.jsp]
     F --> I[mouseList.jsp]
     
-    J[styles.css] --> G &amp; H &amp; I
+    J[styles.css] --> G
+    J --> H
+    J --> I
     
-    D &amp; E &amp; F --> K[UserDAO.java]
-    E &amp; F --> L[MouseDAO.java]
+    D --> K[UserDAO.java]
+    E --> K
+    F --> K
+    E --> L[MouseDAO.java]
+    F --> L
     
     K --> M[UserDTO.java]
     L --> N[MouseDTO.java]
     
-    O[(データベース)] <--> K &amp; L
+    O[(データベース)] <--> K
+    O <--> L
     
     D -->|ログイン成功| E
     E -->|実行ボタン押下| F
+
 
 
 
