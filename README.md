@@ -32,9 +32,7 @@ graph TD
     
     D -->|ログイン成功| E
     E -->|実行ボタン押下| F
-
-
-
+```
 
 # Download Java and MySQL
 
