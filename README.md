@@ -1,6 +1,32 @@
 # Mouse_app
 
-JavaとMysqlを用いてマウスを管理するアプリケーションを作成します
+JavaとMysqlを用いてマウスを管理するアプリケーションを作成します。プロジェクトのワークフローは以下の通りです。
+
+```mermaid
+graph TD
+    A[クライアントブラウザ] -->|HTTPリクエスト| B[Tomcatサーバー]
+    B --> C{web.xml}
+    C -->|マッピング| D[LoginServlet.java]
+    C -->|マッピング| E[MouseInputServlet.java]
+    C -->|マッピング| F[MouseListServlet.java]
+    
+    D --> G[login.jsp]
+    E --> H[mouseInput.jsp]
+    F --> I[mouseList.jsp]
+    
+    J[styles.css] --> G & H & I
+    
+    D & E & F --> K[UserDAO.java]
+    E & F --> L[MouseDAO.java]
+    
+    K --> M[UserDTO.java]
+    L --> N[MouseDTO.java]
+    
+    O[(データベース)] <--> K & L
+    
+    D -->|ログイン成功| E
+    E -->|実行ボタン押下| F
+
 
 # Download Java and MySQL
 
