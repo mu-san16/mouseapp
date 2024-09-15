@@ -6,32 +6,24 @@ JavaとMysqlを用いてマウスを管理するアプリケーションを作�
 graph TD
     A[クライアントブラウザ] -->|HTTPリクエスト| B[Tomcatサーバー]
     B --> C{web.xml}
-    C -->|パス: /login| D[LoginServlet.java]
-    C -->|パス: /mouseInput| E[MouseInputServlet.java]
-    C -->|パス: /mouseList| F[MouseListServlet.java]
-    
+    C -->|マッピング| D[LoginServlet.java]
+    C -->|マッピング| E[MouseInputServlet.java]
+    C -->|マッピング| F[MouseListServlet.java]
     D --> G[login.jsp]
     E --> H[mouseInput.jsp]
     F --> I[mouseList.jsp]
-    
-    J[styles.css] --> G
-    J --> H
-    J --> I
-    
-    D --> K[UserDAO.java]
-    E --> K
-    F --> K
-    E --> L[MouseDAO.java]
-    F --> L
-    
-    K --> M[UserDTO.java]
-    L --> N[MouseDTO.java]
-    
-    O[(データベース)] <--> K
-    O <--> L
-    
-    D -->|ログイン成功| E
-    E -->|実行ボタン押下| F
+    G --> J[styles.css]
+    H --> J
+    I --> J
+    D <--> K[UserBean.java]
+    E <--> L[MouseBean.java]
+    F <--> L
+    K <--> M[UserDAO.java]
+    L <--> N[MouseDAO.java]
+    M <--> O[(データベース)]
+    N <--> O
+    M --> P[UserDTO.java]
+    N --> Q[MouseDTO.java]
 ```
 
 # Download Java and MySQL
