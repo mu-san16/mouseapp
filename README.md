@@ -7,23 +7,26 @@ graph TD
     A[クライアントブラウザ] -->|HTTPリクエスト| B[Tomcatサーバー]
     B --> C{web.xml}
     C -->|マッピング| D[LoginServlet.java]
-    C -->|マッピング| E[MouseInputServlet.java]
-    C -->|マッピング| F[MouseListServlet.java]
-    D --> G[login.jsp]
-    E --> H[mouseInput.jsp]
-    F --> I[mouseList.jsp]
-    G --> J[styles.css]
-    H --> J
-    I --> J
-    D <--> K[UserBean.java]
-    E <--> L[MouseBean.java]
-    F <--> L
-    K <--> M[UserDAO.java]
-    L <--> N[MouseDAO.java]
-    M <--> O[(データベース)]
-    N <--> O
-    M --> P[UserDTO.java]
-    N --> Q[MouseDTO.java]
+    C -->|マッピング| E[RegisterServlet.java]
+    C -->|マッピング| F[MouseInputServlet.java]
+    C -->|マッピング| G[MouseListServlet.java]
+    D --> H[login.jsp]
+    E --> H
+    F --> I[mouseInput.jsp]
+    G --> J[mouseList.jsp]
+    H --> K[styles.css]
+    I --> K
+    J --> K
+    D <--> L[UserBean.java]
+    E <--> L
+    F <--> M[MouseBean.java]
+    G <--> M
+    L <--> N[UserDAO.java]
+    M <--> O[MouseDAO.java]
+    N <--> P[(データベース)]
+    O <--> P
+    N --> Q[UserDTO.java]
+    O --> R[MouseDTO.java]
 ```
 
 # Download Java and MySQL
