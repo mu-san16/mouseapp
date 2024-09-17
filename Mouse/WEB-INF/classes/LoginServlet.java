@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 //WebServletはURLのパターンの指定をしている(ファイル名と合わせるのが基本)
-@WebServlet("/Login")
+@WebServlet("/LoginServlet")
 //LoginServletクラスの宣言を行なっている。(publicは他のパッケージからもアクセスできることを表す)
 //HttpServletはHTTPプロトコルを使用したWebアプリケーションの基本的な機能を提供
 public class LoginServlet extends HttpServlet {
