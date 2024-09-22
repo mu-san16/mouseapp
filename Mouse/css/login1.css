@@ -1,0 +1,77 @@
+/* 画面全体をコントロールする
+justify-contentは縦方向の位置を決めている
+align-itmesはボックスの位置を決めている */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* 見出しの位置は色を整えてくれる */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* それぞれの感覚を広げてくれる */
+.form-group{
+    margin-bottom: 1rem;
+}
+
+/* labelと書かれて要素をスタイルとして定義している */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+/* 入力する部分をに関するレイアウト調節 */
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* ボタンに関する調節 */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button-group button:first-child {
+    background-color: #059ca4;
+    color: white;
+}
+
+.button-group button:last-child {
+    background-color: #059ca4;
+    color: white;
+}
+
