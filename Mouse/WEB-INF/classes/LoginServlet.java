@@ -1,3 +1,5 @@
+//フロントエンド(login.jsp)とバックエンド(UserBean, UserDAO)をつなぐ役割！
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,16 +19,19 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        //UserBeanを使えるようにするため変数を生成する
+        // UserBeanを使用してユーザー認証を行う
         UserBean userBean = new UserBean();
         //User認証を行い次の画面に推移する(ValidateUserに関してはUserDAOに生成されている関数)
-        if (userBean.validateUser(username, password)) {
+        boolean isValid = userBean.validateUser(username, password);
+        if (isValid) {
             //セッションを取得(ユーザとサイトを繋ぐために必要であり、ページを跨いでユーザーの情報を記憶することが可能となる)
+            //認証成功
             HttpSeesion session = request.getSession();
             session.setAttribute("user", username);
             //次のページへの推移を促す
             response.sendRedirect("MouseInput.jsp");
         } else {
+            //認証失敗
             request.steAttribute("errorMessage", "Invaild username or password");
             request.getRequestDispatcher("login.jsp").forward(request,response);
         }
