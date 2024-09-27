@@ -1,34 +1,26 @@
-// データベースとアプリケーション間でユーザー情報を転送するためのデータ構造を提供
-// データのカプセル化：ユーザー関連のデータをひとまとめにする
+//ユーザーの情報を1つのまとまりとして扱うための箱みたいなもの
+//郵便物を送る箱をイメージしてもらうとわかりやすく、この箱の中に情報を入れて情報を表示したり、データベースに送ったりする
 
-//他のファイルからのアクセスをする必要があるので記載する必要がある
+//他のファイルからのアクセスをする際に必要である
 public class UserDTO {
-    private int id;
     private String username;
     private String password;
 
     //この部分は初期化するために必要な部分
     public UserDTO() {}
 
-    public UserDTO(int id, String username, String password) {
-        this.id = id;
+    public UserDTO(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
     //getとsetは他のファイルとのやりとりで使用することが目的となっている(橋渡し)
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //getは情報を取り出す
     public String getUsername() {
         return username;
     }
 
+    //setは情報を設定する
     public void setUsername(String username) {
         this.username = username;
     }
@@ -44,8 +36,7 @@ public class UserDTO {
     @Override
     public String toString() {
         return "UserDTO{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
+                "username='" + username + '\'' +
                 ", password='[PROTECTED]'" +
                 '}';
     }

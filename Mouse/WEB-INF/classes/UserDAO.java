@@ -46,7 +46,7 @@ public class UserDAO {
             }
     }
 
-    //ユーザー名からユーザー情報を取得
+    //ユーザー名からユーザー情報を取得 (このコードは絶対必要)
     public void getUserByUsername(String username) throws SQLException {
         String sql = "SELECT * FROM users WHERE username = ?";
         try (Connection conn = dataSource.getConnection();
