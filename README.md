@@ -29,6 +29,38 @@ graph TD
     O --> R[MouseDTO.java]
 ```
 
+# file structure
+# プロジェクト構造
+
+```
+WebContent/
+│
+├── WEB-INF/
+│   ├── web.xml
+│   ├── classes/
+│   │   ├── servlets/
+│   │   │   ├── LoginServlet.class
+│   │   │   ├── RegisterServlet.class
+│   │   │   ├── MouseInputServlet.class
+│   │   │   └── MouseListServlet.class
+│   │   ├── dao/
+│   │   │   ├── UserDAO.class
+│   │   │   └── MouseDAO.class
+│   │   └── bean/
+│   │       ├── UserBean.class
+│   │       ├── MouseBean.class
+│   │       ├── UserDTO.class
+│   │       └── MouseDTO.class
+│   │
+│   └── lib/
+│       └── （必要なJARファイル）
+│
+├── login.jsp
+├── mouseInput.jsp
+├── mouseList.jsp
+└── styles.css
+```
+
 # Download Java and MySQL
 
 WindowsとMacそれぞれのhttps://github.com/mu-san16/mouseapp/tree/main/Download%20Java に記載してあります。
