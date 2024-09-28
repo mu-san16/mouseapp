@@ -1,3 +1,4 @@
+package servlets;
 //フロントエンド(login.jsp)とバックエンド(UserBean, UserDAO)をつなぐ役割！
 import java.io.IOException;
 import javax.servlet.ServletException;

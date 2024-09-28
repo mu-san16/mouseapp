@@ -1,3 +1,4 @@
+package dao;
 // マウス情報のデータベース操作（挿入、取得、更新、削除）を担当
 import java.spl.*;
 
