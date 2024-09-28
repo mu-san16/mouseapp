@@ -30,7 +30,6 @@ graph TD
 ```
 
 # file structure
-# プロジェクト構造
 
 ```
 WebContent/
